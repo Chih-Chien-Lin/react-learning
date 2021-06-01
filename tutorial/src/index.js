@@ -4,8 +4,14 @@ import ReactDom from 'react-dom'
 
 // function is component, return html
 // function name should start with upper case to be recognized as component.
-function Greeting(){
-  return <h4>hello, test Justin first cmp</h4>;
+// Always have to return smth, even empty html tags
+// function Greeting(){
+//   return <h4>hello, test Justin first cmp</h4>;
+// }
+
+// React.createElement(element, props object, child)
+const Greeting =() =>{
+  return React.createElement('h1',{},'hello world')
 }
 
 ReactDom.render(<Greeting/>,document.getElementById('root'));
