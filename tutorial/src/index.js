@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
+
+// function is component, return html
 function Greeting(){
   return <h4>hello, test Justin first cmp</h4>;
 }
