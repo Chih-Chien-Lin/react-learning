@@ -9,10 +9,37 @@ import ReactDom from 'react-dom'
 //   return <h4>hello, test Justin first cmp</h4>;
 // }
 
-// React.createElement(element, props object, child)
-const Greeting =() =>{
-  return React.createElement('h1',{},'hello world')
+// JSX Rules
+// return single element( wrap everything in a div / section / article)
+// div / section / article or Fragment
+// use camelCase for html attribute
+// className instead of class
+// close every element
+// formatting
+function Greeting(){
+  return(
+    <div>
+      <h3>hello people</h3>
+      <ul>
+        <li>
+          <a href='#'>hello world</a>
+        </li>
+      </ul>
+    </div>
+  )
 }
+// function Greeting(){
+//   return(
+//     <div>
+//       <h1>hello World!!</h1>
+//     </div>
+//   )
+// }
+
+// React.createElement(element, props object, child)
+// const Greeting =() =>{
+//   return React.createElement('h1',{},'hello world')
+// }
 
 ReactDom.render(<Greeting/>,document.getElementById('root'));
 
