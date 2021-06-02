@@ -39,7 +39,9 @@ const Title = () => {
 }
 
 const Author = () => {
-  return <h4>Elin Hilderbrand</h4>
+  // if we type style={}, everything inside of {} will be considered as JS
+  // if we type style={{}}, everything inside will be considered as object(css object)
+  return <h4 style={{color:'#617d98',fontSize:'0.75rem',marginTop:'0.5rem'}}>Elin Hilderbrand</h4>
 }
 
 ReactDom.render(<BookList/>,document.getElementById('root'));
