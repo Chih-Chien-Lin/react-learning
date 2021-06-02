@@ -3,23 +3,38 @@ import ReactDom from 'react-dom'
 
 // Nested Components, React Tools
 
-function Greeting(){
+function BookList(){
   return(
-    <div>
-      <Person/>
-      <Message/>
-    </div>
+    <section>
+      <Book />
+      <Image />
+      <Title></Title>
+      <Author></Author>
+
+    </section>
   );
 }
 
-const Person = () =>{
-  return <h2>john doe</h2>
-}
-const Message = () =>{
-  return <p> this is my message</p>
-}
 
 
-ReactDom.render(<Greeting/>,document.getElementById('root'));
+const Book = () => {
+  return <article>
+    this is a book
+  </article>
+}
+
+const Image = () => {
+  return <img src="https://images-na.ssl-images-amazon.com/images/I/81a5IRbOR4L._AC_UL200_SR200,200_.jpg" alt=""/>
+}
+
+const Title = () => {
+  return <h1>Golden Girl</h1>
+}
+
+const Author = () => {
+  return <h4>Elin Hilderbrand</h4>
+}
+
+ReactDom.render(<BookList/>,document.getElementById('root'));
 
 
