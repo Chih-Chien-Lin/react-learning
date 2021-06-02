@@ -18,14 +18,17 @@ import ReactDom from 'react-dom'
 // formatting
 function Greeting(){
   return(
-    <div>
+    // <div>
+    // if not use too many <div>, we can use React.Fragment as replacement.
+    <React.Fragment>
       <h3>hello people</h3>
       <ul>
         <li>
           <a href='#'>hello world</a>
         </li>
       </ul>
-    </div>
+    </React.Fragment>
+    // </div>
   )
 }
 // function Greeting(){
