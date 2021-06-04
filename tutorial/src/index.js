@@ -19,28 +19,22 @@ const secondBook = {
 function BookList(){
   return(
     <section className='booklist'>
-      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
+      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}>
+        <p>In laboris enim aliqua consectetur.</p>
+      </Book>
       <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
-
+ 
     </section> 
   );
 }
 
-// props destruction method1
-// const Book = (props) => {
-// const{img, title, author} = props
-// return <article className='book'>
-//     <img src={img} alt=""/>
-//     <h1>{title}</h1>
-//     <h4>{author.toUpperCase()}</h4>
-//   </article>
-// }
-//props desctruction method2
-const Book = ({img, title, author}) => {
+
+const Book = ({img, title, author, children}) => {
   return <article className='book'>
       <img src={img} alt=""/>
       <h1>{title}</h1>
       <h4>{author.toUpperCase()}</h4>
+      {children}
     </article>
   }
 
