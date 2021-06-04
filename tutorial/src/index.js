@@ -5,36 +5,42 @@ import ReactDom from 'react-dom'
 import './index.css'
 
 // Variables
-const firstBook = {
-  img: "https://images-na.ssl-images-amazon.com/images/I/81a5IRbOR4L._AC_UL200_SR200,200_.jpg",
-  title: 'Golden Girl',
-  author: 'Elin Hilderbrand'
-}
-const secondBook = {
-  img: "https://images-na.ssl-images-amazon.com/images/I/916I7ZLbwPL._AC_UL200_SR200,200_.jpg",
-  title: 'After the Fall: Being American in the World We\'ve Made',
-  author: 'Ben Rhodes'
-}
-
+const books = [
+  {
+    img: "https://images-na.ssl-images-amazon.com/images/I/81a5IRbOR4L._AC_UL200_SR200,200_.jpg",
+    title: 'Golden Girl',
+    author: 'Elin Hilderbrand'
+  },
+  {
+    img: "https://images-na.ssl-images-amazon.com/images/I/916I7ZLbwPL._AC_UL200_SR200,200_.jpg",
+    title: 'After the Fall: Being American in the World We\'ve Made',
+    author: 'Ben Rhodes'
+  }
+]
+// to render a list, you need to render it to html tags before using it
+const names = ['john','peter','jack']
+const newNames = names.map((name)=>{
+  return<h1>{name}</h1>
+  console.log(name);
+})
+console.log(newNames)
 function BookList(){
   return(
     <section className='booklist'>
-      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}>
-        <p>In laboris enim aliqua consectetur.</p>
-      </Book>
-      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
- 
+      {newNames}
     </section> 
   );
 }
 
 
-const Book = ({img, title, author, children}) => {
+const Book = (props) => {
+  const {img, title, author} = props
+  console.log(props.children)
   return <article className='book'>
       <img src={img} alt=""/>
       <h1>{title}</h1>
       <h4>{author.toUpperCase()}</h4>
-      {children}
+
     </article>
   }
 
