@@ -9,15 +9,16 @@ body{
 }
 
 .booklist{
-    width: 90vw;
-    max-width: 1170px;
+    width: 90px;
+    /* max-width: 1170px; */
+    margin-left: 5%;
     margin:  5rem auto;
     display: grid;
     gap: 2rem;
 }
 
 .book{
-    background:#fff;
+    background:gray;
     border-radius: 1rem;
     padding: 1rem 2rem;
 }
