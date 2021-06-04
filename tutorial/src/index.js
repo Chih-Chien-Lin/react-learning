@@ -16,20 +16,20 @@ function BookList(){
   return(
     <section className='booklist'>
       <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
-      <Book />
+      <Book title='random title' number={22} author='hello'/>
 
     </section>
   );
 }
 
 
-
+// if use props, need to make sure all the variables are defined, or it'll be undefined error.
 const Book = (props) => {
   console.log(props);
   return <article className='book'>
-    <img src={img} alt=""/>
-    <h1>{title}</h1>
-    <h4>{author.toUpperCase()}</h4>
+    <img src={props.img} alt=""/>
+    <h1>{props.title}</h1>
+    <h4>{props.author.toUpperCase()}</h4>
     <p>{props.job}</p>
     <p>{props.title}</p>
   </article>
