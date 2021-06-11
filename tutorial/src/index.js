@@ -14,7 +14,7 @@ const books = [
   {
     img: "https://images-na.ssl-images-amazon.com/images/I/916I7ZLbwPL._AC_UL200_SR200,200_.jpg",
     title: 'After the Fall: Being American in the World We\'ve Made',
-    author: 'Mr. Ben Rhodes'
+    author: 'Mr. Ben Rhodesssdaf'
   }
 ]
 // to render a list, you need to render it to html tags before using it
