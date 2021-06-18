@@ -8,8 +8,8 @@ import './index.css'
 const books = [
   {
     img: "https://images-na.ssl-images-amazon.com/images/I/81a5IRbOR4L._AC_UL200_SR200,200_.jpg",
-    title: 'Golden Girl',
-    author: 'Elin Hilderbrand asd'
+    title: 'Golden Girls',
+    author: 'Elin Hilderbrand '
   },
   {
     img: "https://images-na.ssl-images-amazon.com/images/I/916I7ZLbwPL._AC_UL200_SR200,200_.jpg",
