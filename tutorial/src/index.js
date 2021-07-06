@@ -14,27 +14,31 @@ const books = [
   {
     img: "https://images-na.ssl-images-amazon.com/images/I/916I7ZLbwPL._AC_UL200_SR200,200_.jpg",
     title: 'After the Fall: Being American in the World We\'ve Made',
-    author: 'Mr. Ben Rhodesssdaf'
+    author: 'Mr. Ben Rhodes'
   }
 ]
 // to render a list, you need to render it to html tags before using it
-const names = ['john','peter','jack']
-const newNames = names.map((name)=>{
-  return<h1>{name}</h1>
-  console.log(name);
-})
-console.log(newNames)
+
 function BookList(){
   return(
-    <section className='booklist'>
-      {newNames}
-    </section> 
+    <section className='booklist'>{books.map((book)=>{
+      const {img, title,author} = book;
+      // return (
+      //   <div>
+      //     <h3>{title}</h3>
+      //     <h6>{author}</h6>
+      //   </div>
+      // );
+      return(
+        <Book book={book}></Book>
+      )
+    })}</section> 
   );
 }
 
 
 const Book = (props) => {
-  const {img, title, author} = props
+  const {img, title, author} = props.book
   console.log(props.children)
   return <article className='book'>
       <img src={img} alt=""/>
