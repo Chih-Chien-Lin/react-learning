@@ -32,7 +32,8 @@ function BookList(){
       //   </div>
       // );
       return(
-        <Book key={book.id} book={book}></Book>
+        // {...book}functional Component - Spread Operator: means all the properties from book objects will be passed to the prop, no longer an object variable
+        <Book key={book.id} {...book}></Book>
       )
     })}</section> 
   );
@@ -40,7 +41,7 @@ function BookList(){
 
 
 const Book = (props) => {
-  const {img, title, author} = props.book
+  const {img, title, author} = props
   console.log(props.children)
   return <article className='book'>
       <img src={img} alt=""/>
