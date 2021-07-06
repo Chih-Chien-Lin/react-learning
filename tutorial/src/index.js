@@ -7,11 +7,13 @@ import './index.css'
 // Variables
 const books = [
   {
+    id:1,
     img: "https://images-na.ssl-images-amazon.com/images/I/81a5IRbOR4L._AC_UL200_SR200,200_.jpg",
     title: 'Golden Girls',
     author: 'Elin Hilderbrand '
   },
   {
+    id:2,
     img: "https://images-na.ssl-images-amazon.com/images/I/916I7ZLbwPL._AC_UL200_SR200,200_.jpg",
     title: 'After the Fall: Being American in the World We\'ve Made',
     author: 'Mr. Ben Rhodes'
@@ -30,7 +32,7 @@ function BookList(){
       //   </div>
       // );
       return(
-        <Book book={book}></Book>
+        <Book key={book.id} book={book}></Book>
       )
     })}</section> 
   );
