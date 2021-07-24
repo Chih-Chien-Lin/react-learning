@@ -48,14 +48,18 @@ const Book = (props) => {
   const clickHandler = (e) =>{
     console.log(e)
     console.log(e.target)
-    alert('hello world');
+    alert('hello world'); 
   }
   const complexExample = (author) => {
     console.log(author)
   }
 
   console.log(props.children)
-  return <article className='book'>
+  return (
+    // <article className='book' onMouseOver={()=>{
+    //   console.log(title)
+    // }}>
+    <article className='book'>
       <img src={img} alt=""/>
       <h1 onClick={() => console.log(title)}>{title}</h1>
       <h4>{author.toUpperCase()}</h4>
@@ -68,7 +72,8 @@ const Book = (props) => {
       </button>
 
     </article>
-  }
+  )  
+}
 
 
 ReactDom.render(<BookList/>,document.getElementById('root'));
