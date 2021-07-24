@@ -23,8 +23,9 @@ const books = [
 
 function BookList(){
   return(
-    <section className='booklist'>{books.map((book)=>{
-      const {img, title,author} = book;
+    <section className='booklist'>
+      {books.map((book)=>{
+      // const {img, title,author} = book;
       // return (
       //   <div>
       //     <h3>{title}</h3>
@@ -41,12 +42,30 @@ function BookList(){
 
 
 const Book = (props) => {
+  // attribute, eventHandler
+  //onClick, onMouseOver
   const {img, title, author} = props
+  const clickHandler = (e) =>{
+    console.log(e)
+    console.log(e.target)
+    alert('hello world');
+  }
+  const complexExample = (author) => {
+    console.log(author)
+  }
+
   console.log(props.children)
   return <article className='book'>
       <img src={img} alt=""/>
-      <h1>{title}</h1>
+      <h1 onClick={() => console.log(title)}>{title}</h1>
       <h4>{author.toUpperCase()}</h4>
+      <button type="button" onClick={clickHandler}>
+        reference example
+      </button>
+      {/* if we do onClick={conplexExample(author)}, it will trigger three times on load, in order to show when onClick, we use the following method */}
+      <button type="button" onClick={() => complexExample(author)}>
+        more complex example
+      </button>
 
     </article>
   }
